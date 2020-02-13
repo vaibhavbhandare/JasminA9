@@ -21,7 +21,6 @@ export class TestComponent implements OnInit {
    this.methodCall.push('Hi I am ngOnInit Call')
   }
 
-
   addNumber(a,b):Number{
     return a+b
   }

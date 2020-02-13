@@ -26,16 +26,16 @@ describe('TestComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have name' , ()=>{
-    expect(component.name).toEqual('vaibhav')
-  })
+  // it('should have name' , ()=>{
+  //   expect(component.name).toEqual('vaibhav')
+  // })
 
-  it('should Renderer name title' ,()=>{
-    fixture = TestBed.createComponent(TestComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('My Name is vaibhav');
-  })
+  // it('should Renderer name title' ,()=>{
+  //   fixture = TestBed.createComponent(TestComponent);
+  //   fixture.detectChanges();
+  //   const compiled = fixture.nativeElement;
+  //   expect(compiled.querySelector('h1').textContent).toContain('My Name is vaibhav');
+  // })
 
   it("Add Number Method Call" , ()=>{
     fixture = TestBed.createComponent(TestComponent)
