@@ -10,6 +10,20 @@ export class TestComponent implements OnInit {
   public name = 'vaibhav';
   public methodCall:Array<any> = [];
 
+  public str1='Data Practice'
+  public str2='Data Practice'
+  
+  public a:any ={
+    test:'React'
+  }
+
+  public b:any ={
+    test:'React'
+  }
+
+  public arr1 =[10,20,0]
+  public arr2 =[10,20,0]
+
   constructor() {
     this.methodCall.push('Hi I am Constructor Call')
    }

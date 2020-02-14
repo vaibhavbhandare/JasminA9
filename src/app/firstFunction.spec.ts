@@ -1,10 +1,8 @@
 import {multiplication} from './firstFunction'
 
-describe('Testing the firstFunction',()=>{
+xdescribe('Testing the firstFunction',()=>{
 
     it('should is addition equal' , ()=>{
-
-        expect(multiplication(10,10))
-
+        expect(multiplication(10,10)).toBe(100)
     })
 })
