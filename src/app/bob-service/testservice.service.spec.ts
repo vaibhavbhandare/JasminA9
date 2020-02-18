@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { TestserviceService } from './testservice.service';
 import { HttpClientModule } from '@angular/common/http';
-import {HttpTestingController} from '@angular/common/http/testing'
+import {HttpTestingController , HttpClientTestingModule} from '@angular/common/http/testing'
 
 describe('TestserviceService', () => {
   let service: TestserviceService;
@@ -9,11 +9,11 @@ describe('TestserviceService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports : [HttpClientModule  ],
+      imports : [HttpClientModule , HttpClientTestingModule ],
       providers : [TestserviceService]
     });
-    service = TestBed.inject(TestserviceService);
-   // httpcontroller = TestBed.get(HttpTestingController)
+    service = TestBed.get(TestserviceService);
+    httpcontroller = TestBed.get(HttpTestingController)
   });
 
   it('should be created Test servicwe', () => {
@@ -37,7 +37,7 @@ describe('TestserviceService', () => {
     service.getdatahttp().subscribe(data=>{
       expect(data.length).toEqual(10)
     })
-    //const req = httpcontroller.expectOne('https://jsonplaceholder.typicode.com/users');
-    //expect(req.request.method).toBe('GET')
+    const req = httpcontroller.expectOne('https://jsonplaceholder.typicode.com/users');
+    expect(req.request.method).toBe('GET')
   })
 });
