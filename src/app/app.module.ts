@@ -5,11 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { HttpClientModule } from '@angular/common/http';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { UserServiceService } from './user-service.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent
+    TestComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
@@ -17,7 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
     //HttpTestingController
   ],
-  providers: [],
+  providers: [UserServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
